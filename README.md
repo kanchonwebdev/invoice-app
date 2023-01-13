@@ -1,10 +1,13 @@
 # invoice-app
-# start json server
-json-server data.json
 
 ## Project setup
 ```
 npm install
+```
+
+# start json server
+```
+json-server data.json
 ```
 
 ### Compiles and hot-reloads for development
