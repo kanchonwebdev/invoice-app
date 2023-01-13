@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    @include primary-font();
+    scroll-behavior: smooth;
+    font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (1920 - 320)));
+}
+
+input,
+textarea,
+select,
+::placeholder {
+    @include primary-font();
+}
+
+a{
+    text-decoration: none;
+    color: #222;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    li{
+        list-style-type: none;
+    }
+}
+
+h1, h2, h3, h4, h5, h6{
+    padding: 0;
+    margin: 0;
+}

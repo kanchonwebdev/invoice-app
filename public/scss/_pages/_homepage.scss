@@ -1,0 +1,146 @@
+.data-container {
+    width: calc(100% - 300px);
+    margin-left: auto;
+    margin-top: 70px;
+    min-height: calc(100vh - 140px);
+    padding: calc(15px + (35 - 15) * ((100vw - 320px) / (1920 - 320)));
+    background: #F9FBFD;
+
+    .header {
+        margin-bottom: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320)));
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+        margin-bottom: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320)));
+
+        .block {
+            border: 1px solid gray;
+            padding: calc(15px + (20 - 15) * ((100vw - 320px) / (1920 - 320)));
+
+            h2 {
+                font-size: calc(25px + (55 - 25) * ((100vw - 320px) / (1920 - 320)));
+            }
+        }
+    }
+
+    .invoice-table {
+        width: 100%;
+
+        tr {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            th {
+                border-bottom: 1px solid gray;
+                text-align: left;
+                padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+                padding-left: 0px;
+            }
+
+            td {
+                padding: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
+                padding-left: 0px;
+
+                .btn {
+                    padding: calc(5px + (6 - 5) * ((100vw - 320px) / (1920 - 320))) calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+                    background: #222;
+                    color: #fff;
+                    margin-right: 10px;
+                    border-radius: 5px;
+                    font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .invoice-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(128, 128, 128, 0.664);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: auto;
+
+        .modal-content {
+            width: 800px;
+            margin: auto;
+            min-height: 80vh;
+            background: #fff;
+            padding: calc(20px + (40 - 20) * ((100vw - 320px) / (1920 - 320)));
+            display: grid;
+            grid-template-columns: 1fr;
+            align-content: center;
+            position: relative;
+            gap: calc(30px + (80 - 30) * ((100vw - 320px) / (1920 - 320)));
+
+            h2 {
+                text-align: center;
+            }
+
+            .modal-wrapper{
+                display: grid;
+                gap: calc(5px + (10 - 5) * ((100vw - 320px) / (1920 - 320)));
+            }
+
+            .modal-footer {
+                text-align: right;
+
+                p{
+                    margin: 0px;
+                }
+            }
+
+            .btn-block {
+                text-align: center;
+                width: 100%;
+
+                .btn {
+                    width: fit-content;
+                    padding: calc(5px + (6 - 5) * ((100vw - 320px) / (1920 - 320))) calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+                    background: #222;
+                    color: #fff;
+                    margin-right: 10px;
+                    border-radius: 5px;
+                    font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));
+                    cursor: pointer;
+                    margin: auto;
+                }
+            }
+
+            .close{
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+            }
+        }
+
+        &.activeModal{
+            display: flex;
+        }
+
+        &.hideModal{
+            display: none;
+        }
+    }
+}
+
+.footer {
+    width: calc(100% - 300px);
+    height: 70px;
+    margin-left: auto;
+    text-align: center;
+    background: #222;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
