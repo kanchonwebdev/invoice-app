@@ -1,4 +1,6 @@
 # invoice-app
+# start json server
+json-server data.json
 
 ## Project setup
 ```
